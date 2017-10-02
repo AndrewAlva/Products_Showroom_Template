@@ -1,6 +1,6 @@
 @import 'mixins';
 
-// MANDELBROT Boilerplate style
+// General style
 	
 	// Variables
 	$mainHeight: 50px;
@@ -19,68 +19,64 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
+			overflow-y: scroll;
 			@include sizeFix();
-			border: 10px solid #fff;
 			margin: auto;
 			top: 0; bottom: 0; left: 0; right: 0;
 			background-color: $mbrtLightGray;
 
-			header{
-				position: fixed;
-				width: 50%;
-				height: $mainHeight;
-				right: 10px;
-				border: 1px solid $mbrtDarkGray;
-				
-				li{
-					@include displayLeft();
-					width: 20%;
-
-				}
-			}
-
 			section{
+				z-index: 1;
 				position: relative;
 				width: 100%;
-				top: ($mainHeight * 2);
-			}
-
-			footer{
-				position: fixed;
-				width: 200px;
-				height: $mainHeight;
-				left: 10px;
-				bottom: 10px;
-				border: 1px solid $mbrtDarkGray;
-
-				li{
-					@include displayLeft();
-					width: 25%;
-					text-transform: uppercase;
-				}
+				height: 100%;
+				line-height: 100vh;
+				top: 0; left: 0;
 			}
 
 			.mbrtBttns{
-				line-height: $mainHeight;
+				line-height: 20px;
 			}
 
-			a{
+			.mbrtLinks{
 				display: block;
 				text-align: center;
 				text-decoration: none;
 				color: $mbrtLightGray;
 				font-weight: lighter;
 				background-color: $mbrtDarkGray;
-
-				@include transitions(all, 0.3s, ease-in-out);
-
-				&:hover{
-					color: $mbrtDarkGray;
-					background-color: $mbrtLightGray;
-					@include opacity(0.5);
-				}
+				line-height: $mainHeight;
 			}
+
+			.dropdownTriangle{
+				position: relative;
+				width: 0; 
+				height: 0;
+				top: 12px;
+				left: 10px;
+				border-top: 8px solid #000;
+
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+			}
+
+			a{
+				@include transitions(all, 0.3s, ease-in-out);
+			}
+
+			// Header Classes
+			@import 'header';
+			// Footer Classes
+			@import 'footer';
+
+
+
+			// Section Classes by Content
+			@import 'sections/home-big_background_left';
+
+
+
+			// Hover Animation Classes
+			@import 'hovers';
 		}
 	}
-
-// END MANDELBROT style

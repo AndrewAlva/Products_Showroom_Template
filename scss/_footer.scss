@@ -1,0 +1,32 @@
+footer{
+	z-index: 1000000000;
+	position: fixed;
+	width: 63px;
+	height: 20px;
+	right: 68px;
+	bottom: 32px;
+
+	li{
+		@include displayLeft();
+		width: 20px;
+		height: 100%;
+		text-transform: uppercase;
+	}
+
+	a{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	img{
+		vertical-align: baseline;
+	}
+
+	.firstBttn{
+		float: left;
+	}
+	.secondBttn{
+		float: right;
+	}
+}

@@ -18,7 +18,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #eee; }
+    background-color: #eee;
+    /* JS disabled styles */ }
     #mbrtWrap .innerWrap section {
       z-index: 1;
       position: relative;
@@ -37,46 +38,25 @@
       font-weight: lighter;
       background-color: #303030;
       line-height: 50px; }
-    #mbrtWrap .innerWrap .dropdownTriangle {
-      position: relative;
-      width: 0;
-      height: 0;
-      top: 12px;
-      left: 10px;
-      border-top: 8px solid #000;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent; }
     #mbrtWrap .innerWrap a {
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       -ms-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
-    #mbrtWrap .innerWrap header {
+    #mbrtWrap .innerWrap .no-js nav li:hover ul {
+      display: block; }
+    #mbrtWrap .innerWrap nav {
       z-index: 1000000000;
       position: fixed;
       width: 100%;
       height: 56px; }
-      #mbrtWrap .innerWrap header .logoHome {
-        position: absolute;
-        width: 148px;
-        height: 18px;
-        bottom: 0px;
-        left: 85px; }
-        #mbrtWrap .innerWrap header .logoHome a {
-          position: absolute;
-          width: 100%;
-          height: 100%; }
-        #mbrtWrap .innerWrap header .logoHome img {
-          width: 100%;
-          vertical-align: baseline; }
-      #mbrtWrap .innerWrap header #dropdownMenu {
+      #mbrtWrap .innerWrap nav #dropdown_menu {
         position: absolute;
         width: 50%;
-        right: 0;
         margin: 0;
         padding: 0; }
-        #mbrtWrap .innerWrap header #dropdownMenu li {
+        #mbrtWrap .innerWrap nav #dropdown_menu li {
           position: relative;
           float: left;
           display: inline-block;
@@ -86,6 +66,15 @@
           *display: inline;
           /* Fix for IE7 */
           width: 25%; }
+        #mbrtWrap .innerWrap nav #dropdown_menu .dropdown_arrow {
+          position: relative;
+          width: 0;
+          height: 0;
+          top: 12px;
+          left: 10px;
+          border-top: 8px solid #000;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent; }
     #mbrtWrap .innerWrap footer {
       z-index: 1000000000;
       position: fixed;

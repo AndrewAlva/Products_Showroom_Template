@@ -48,24 +48,13 @@
 				line-height: $mainHeight;
 			}
 
-			.dropdownTriangle{
-				position: relative;
-				width: 0; 
-				height: 0;
-				top: 12px;
-				left: 10px;
-				border-top: 8px solid #000;
-
-				border-left: 8px solid transparent;
-				border-right: 8px solid transparent;
-			}
-
 			a{
 				@include transitions(all, 0.3s, ease-in-out);
 			}
 
 			// Header Classes
-			@import 'header';
+			@import 'dropdown_menu';
+
 			// Footer Classes
 			@import 'footer';
 

@@ -15,52 +15,32 @@ $mbrtDarkGray: #303030;
 }
 
 // Default Style
-#mbrtWrap{
+
+
+.innerWrap{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow-y: scroll;
+	@include sizeFix();
+	background-color: $mbrtLightGray;
 
-	.innerWrap{
-		position: absolute;
+	section{
+		z-index: 1;
+		position: relative;
 		width: 100%;
 		height: 100%;
-		overflow-y: scroll;
-		@include sizeFix();
-		margin: auto;
-		top: 0; bottom: 0; left: 0; right: 0;
-		background-color: $mbrtLightGray;
+		line-height: 100vh;
+		top: 0; left: 0;
+	}
 
-		section{
-			z-index: 1;
-			position: relative;
-			width: 100%;
-			height: 100%;
-			line-height: 100vh;
-			top: 0; left: 0;
-		}
-
-		.mbrtBttns{
-			line-height: 20px;
-		}
-
-		.mbrtLinks{
-			display: block;
-			text-align: center;
-			text-decoration: none;
-			color: $mbrtLightGray;
-			font-weight: lighter;
-			background-color: $mbrtDarkGray;
-			line-height: $mainHeight;
-		}
-
-		a{
-			@include transitions(all, 0.3s, ease-in-out);
-		}
+	a{
+		@include transitions(all, 0.3s, ease-in-out);
 	}
 }
+
 
 // Header Classes
 @import 'dropdown_menu';

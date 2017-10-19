@@ -1,124 +1,134 @@
 /* JS disabled styles */
-.no-js nav li:hover ul { display:block; }
+.no-js nav li:hover ul { display:block !important; }
 
-
-nav{
-	z-index: 1000000000;
+header{
 	position: fixed;
 	width: 100%;
-	height: 66px;
-	display:block; 
-	margin:  0 auto 20px; 
-	position: relative; 
-	// background-color: #6a6a6a;
-	text-transform: uppercase;
-	
-	ul{
+	height: 76px;
+	z-index: 1000000000;
+
+	#main_logo{
 		position: absolute;
-		height: 100%;
-		margin: 0;
-		padding: 0;
+		top: 42px;
+		left: 4.5%;
 
-		&:after{
-			content:".";
-			display:block;
-			height:0;
-			clear:both;
-			visibility:hidden;
+		img{
+			vertical-align: top;
 		}
+	}
 
-		// Main Nav Links
-		li{
-			@include displayLeft();
-			width: 104px;
-			margin: 0 10px;
-			list-style-type:none;
-			font-size: 15px;
+	#main_nav{
+		position: absolute;
+		display:block;
+		width: 510px;
+		right: 10%; 
+		// background-color: #6a6a6a;
+		text-transform: uppercase;
+		
+		// Whole dropdown
+		.main_ul{
+			position: absolute;
+			height: 100%;
+			margin: 0;
+			padding: 0;
 
-			a { 
+			&:after{
+				content:".";
 				display:block;
-				width: 100%;
-				color:#000;
-				text-decoration:none;
-
-				&:focus{
-					outline:none; 
-					text-decoration:underline; 
-				}
-
-				h3{
-					margin-top: 36px;
-					margin-bottom: 19px;
-					display: inline-block;
-				}
+				height:0;
+				clear:both;
+				visibility:hidden;
 			}
 
-			li:first-child a { 
-				border-left:none; 
-			}
+			// Main Nav Links
+			.main_nav_link{
+				@include displayLeft();
+				@include sizeFix();
+				// width: 104px;
+				padding: 0 8px;
+				margin: 0 12px;
+				list-style-type:none;
 
-			li.last a { 
-				border-right:none; 
-			}
-
-			// Inner dropdown
-			ul{
-				display:none; 
-				width:100%;
-				height: auto;
-				position:absolute; 
-				left:0;
-				border-bottom: 1px solid #919191;
-
-				// Sub Nav Links
-				li{
+				a { 
+					display:block;
 					width: 100%;
-					float:none;
-					margin: 0;
-					border-top: 1px solid #919191;
+					color:#000;
+					text-decoration:none;
 
-					a{ 
-						padding: 0;
-						border-left:none;
-						border-right:none;
-						font-size:14px;
+					&:focus{
+						outline:none; 
+						text-decoration:underline; 
+					}
 
-						&:hover{
-							@include opacity(0.5);
-						}
+					h3{
+						font-size: 18px;
+						margin-top: 32px;
+						margin-bottom: 19px;
+						display: inline-block;
+					}
 
-						h4{
-							font-size: 9px;
-							-webkit-font-smoothing: auto;
-							color: #000;
-							margin-top: 11px;
-						}
+					.dropdown_arrow{
+						position: relative;
+						width: 0; 
+						height: 0;
+						display: inline-block;
+						top: -2px;
+						left: 8px;
+						border-top: 6px solid #000;
 
-						h5{
-							font-size: 12px;
-							color: #686868;
-							margin-top: 0;
-							margin-top: 12px;
-							margin-bottom: 14px;
-						}
+						border-left: 6px solid transparent;
+						border-right: 6px solid transparent;
 					}
 				}
 
-				
+				// Inner dropdown
+				.sub_ul{
+					display:none;
+					position: absolute; 
+					width:100%;
+					height: auto; 
+					left: 4px;
+					padding: 0;
+					border-bottom: 1px solid #919191;
+					list-style-type:none;
+
+					// Sub Nav Links
+					.sub_nav_link{
+						width: 100%;
+						float:none;
+						margin: 0;
+						padding: 0;
+						border-top: 1px solid #919191;
+
+						a{ 
+							padding: 0;
+							border-left:none;
+							border-right:none;
+							font-size:14px;
+
+							&:hover{
+								@include opacity(0.5);
+							}
+
+							h4{
+								font-size: 9px;
+								-webkit-font-smoothing: auto;
+								color: #000;
+								margin-top: 11px;
+							}
+
+							h5, h6{
+								font-size: 13px;
+								letter-spacing: 1px;
+								color: #686868;
+								margin-top: 0;
+								margin-top: 12px;
+								margin-bottom: 14px;
+							}
+						}
+					}
+				}
 			}
-		}
-
-		.dropdown_arrow{
-			position: relative;
-			width: 0; 
-			height: 0;
-			display: inline-block;
-			left: 8px;
-			border-top: 8px solid #000;
-
-			border-left: 8px solid transparent;
-			border-right: 8px solid transparent;
 		}
 	}
 }
-

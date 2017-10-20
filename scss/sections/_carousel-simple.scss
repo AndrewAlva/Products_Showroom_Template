@@ -1,0 +1,96 @@
+.carousel_container{
+	position: absolute;
+	width: 84%;
+	height: 504px;
+	margin: auto;
+	top: 0; bottom: 0; left: 0; right: 0;
+
+	border: 1px solid gray;
+	@include sizeFix();
+
+	.product_type{
+		position: relative;
+		margin: 0;
+		text-transform: uppercase;
+		font-size: 50px;
+		line-height: 50px;
+		letter-spacing: 5px;
+	}
+
+	.carousel_simple{
+		position: relative;
+		width: 100%;
+		height: 454px;
+		// overflow: hidden;
+
+		border: 1px solid green;
+		@include sizeFix();
+
+		.inner_slider{
+			position: relative;
+			height: 100%;
+			display: block;
+			overflow: hidden;
+
+			.product_card{
+				@include displayLeft();
+				width: 25%;
+				height: 100%;
+				// background-color: #fff;
+				box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+			}
+
+			.first_product{
+				// margin-left: -25%;
+			}
+		}
+	}
+
+}
+
+// Arrows
+.arrow_container{
+	position: absolute;
+	width: 20px;
+	height: 454px;
+	margin: auto;
+	top: 50px;
+	bottom: 0;
+
+	border: 1px solid red;
+	@include sizeFix();
+
+	.carousel_arrows{
+		display: block;
+		position: absolute;
+		width: 20px;
+		height: 28px;
+		margin: auto;
+		top: 0; bottom: 0;
+		background:transparent url('../img/carousel_arrows.png') no-repeat;
+
+		@include transitions(all, 0.5s, ease-in-out);
+	}
+
+	.left_carousel_arrow{
+		background-position: left center;
+
+		&:hover{
+			@include translate(-5px, 0);
+		}
+	}
+	.right_carousel_arrow{
+		background-position: right center;
+
+		&:hover{
+			@include translate(5px, 0);
+		}
+	}
+
+	.gray_arrow{
+		@include opacity(0.4);
+	}
+}
+
+.left_arrow_nav{right: 92%;}
+.right_arrow_nav{left: 92%;}

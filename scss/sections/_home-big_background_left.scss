@@ -1,8 +1,9 @@
-#homeLeftImages{
+.home_left_images{
 	background-color: #e5e3e4;
 	min-height: 500px;
+	line-height: 100vh;
 
-	.bigImgContainer{
+	.big_img_container{
 		position: relative;
 		width: 62.5%;
 		height: 100%;
@@ -11,7 +12,7 @@
 		background-position: bottom left;
 	}
 
-	.filterWhite{
+	.filter_white{
 		position: absolute;
 		left: 0; top: 0;
 		width: 100%;

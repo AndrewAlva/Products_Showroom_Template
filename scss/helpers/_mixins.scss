@@ -21,6 +21,14 @@
 	        transition: $class $timing $ease;
 }
 
+@mixin translate($Xmove, $Ymove){
+	-webkit-transform: translate($Xmove, $Ymove);
+	   -moz-transform: translate($Xmove, $Ymove);
+	    -ms-transform: translate($Xmove, $Ymove);
+	     -o-transform: translate($Xmove, $Ymove);
+	        transform: translate($Xmove, $Ymove);
+}
+
 @mixin opacity($val){
 	opacity: $val;
 	filter: alpha(opacity=($val * 100));

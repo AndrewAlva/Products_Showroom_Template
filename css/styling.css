@@ -27,7 +27,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    line-height: 100vh;
     top: 0;
     left: 0; }
   .innerWrap a {
@@ -55,7 +54,7 @@ header {
   header #main_nav {
     position: absolute;
     display: block;
-    width: 510px;
+    width: 540px;
     right: 10%;
     text-transform: uppercase; }
     header #main_nav .main_ul {
@@ -81,6 +80,7 @@ header {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+        min-width: 104px;
         padding: 0 8px;
         margin: 0 12px;
         list-style-type: none; }
@@ -123,7 +123,7 @@ header {
             padding: 0;
             border-top: 1px solid #919191; }
             header #main_nav .main_ul .main_nav_link .sub_ul .sub_nav_link a {
-              padding: 0;
+              padding: 0 0 0 2px;
               border-left: none;
               border-right: none;
               font-size: 14px; }
@@ -175,17 +175,18 @@ footer {
   footer .secondBttn {
     float: right; }
 
-#homeLeftImages {
+.home_left_images {
   background-color: #e5e3e4;
-  min-height: 500px; }
-  #homeLeftImages .bigImgContainer {
+  min-height: 500px;
+  line-height: 100vh; }
+  .home_left_images .big_img_container {
     position: relative;
     width: 62.5%;
     height: 100%;
     background: url("../img/img-1.jpg");
     background-size: cover;
     background-position: bottom left; }
-  #homeLeftImages .filterWhite {
+  .home_left_images .filter_white {
     position: absolute;
     left: 0;
     top: 0;
@@ -196,5 +197,104 @@ footer {
     filter: alpha(opacity=10);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
     -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(($val * 100))'; }
+
+.carousel_container {
+  position: absolute;
+  width: 84%;
+  height: 504px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid gray;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .carousel_container .product_type {
+    position: relative;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 5px; }
+  .carousel_container .carousel_simple {
+    position: relative;
+    width: 100%;
+    height: 454px;
+    border: 1px solid green;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .carousel_container .carousel_simple .inner_slider {
+      position: relative;
+      height: 100%;
+      display: block;
+      overflow: hidden; }
+      .carousel_container .carousel_simple .inner_slider .product_card {
+        position: relative;
+        float: left;
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1;
+        /* Fix for IE7 */
+        *display: inline;
+        /* Fix for IE7 */
+        width: 25%;
+        height: 100%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+
+.arrow_container {
+  position: absolute;
+  width: 20px;
+  height: 454px;
+  margin: auto;
+  top: 50px;
+  bottom: 0;
+  border: 1px solid red;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .arrow_container .carousel_arrows {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 28px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background: transparent url("../img/carousel_arrows.png") no-repeat;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+  .arrow_container .left_carousel_arrow {
+    background-position: left center; }
+    .arrow_container .left_carousel_arrow:hover {
+      -webkit-transform: translate(-5px, 0);
+      -moz-transform: translate(-5px, 0);
+      -ms-transform: translate(-5px, 0);
+      -o-transform: translate(-5px, 0);
+      transform: translate(-5px, 0); }
+  .arrow_container .right_carousel_arrow {
+    background-position: right center; }
+    .arrow_container .right_carousel_arrow:hover {
+      -webkit-transform: translate(5px, 0);
+      -moz-transform: translate(5px, 0);
+      -ms-transform: translate(5px, 0);
+      -o-transform: translate(5px, 0);
+      transform: translate(5px, 0); }
+  .arrow_container .gray_arrow {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(($val * 100))'; }
+
+.left_arrow_nav {
+  right: 92%; }
+
+.right_arrow_nav {
+  left: 92%; }
 
 /*# sourceMappingURL=styling.css.map */

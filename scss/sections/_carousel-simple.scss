@@ -1,7 +1,9 @@
 .carousel_container{
 	position: absolute;
 	width: 84%;
-	height: 504px;
+	// height: 504px;
+	height: 54%;
+	min-height: 384px;
 	margin: auto;
 	top: 0; bottom: 0; left: 0; right: 0;
 
@@ -20,39 +22,68 @@
 	.carousel_simple{
 		position: relative;
 		width: 100%;
-		height: 454px;
-		// overflow: hidden;
+		// height: 454px;
+		height: 90%;
+		overflow: hidden;
 
 		border: 1px solid green;
 		@include sizeFix();
 
 		.inner_slider{
 			position: relative;
+			width: 150%;
 			height: 100%;
 			display: block;
-			overflow: hidden;
 
 			.product_card{
 				@include displayLeft();
-				width: 25%;
+				width: 16.66%;
 				height: 100%;
+				text-align: center;
 				// background-color: #fff;
 				box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
-			}
 
-			.first_product{
-				// margin-left: -25%;
+				.img_container{
+					position: relative;
+					width: 100%;
+					height: 75%;
+					padding: 0 10%;
+					
+					@include sizeFix();
+					border: 1px solid aqua;
+
+					img{
+						position: absolute;
+						margin: auto;
+						top: 0; bottom: 0;
+						left: 0; right: 0;
+					}
+				}
+
+				.info_container{
+					position: relative;
+					width: 100%;
+					height: 25%;
+
+					.product_name, .product_price{
+						margin: 0 0 10px 0;
+						font-size: 14px;
+						letter-spacing: 1px;
+						text-transform: uppercase;
+					}
+				}
 			}
 		}
 	}
 
 }
 
-// Arrows
+// Navigation
 .arrow_container{
 	position: absolute;
 	width: 20px;
-	height: 454px;
+	// height: 454px;
+	height: 50px;
 	margin: auto;
 	top: 50px;
 	bottom: 0;
@@ -94,3 +125,9 @@
 
 .left_arrow_nav{right: 92%;}
 .right_arrow_nav{left: 92%;}
+
+.return_to_collection{
+	position: absolute;
+	width: 132px;
+	height: 38px;
+}

@@ -90,6 +90,7 @@ header{
 					padding: 0;
 					border-bottom: 1px solid #919191;
 					list-style-type:none;
+					background-color: #eee;
 
 					// Sub Nav Links
 					.sub_nav_link{
@@ -100,7 +101,7 @@ header{
 						border-top: 1px solid #919191;
 
 						a{ 
-							padding: 0 0 0 2px;
+							padding: 0 0 0 7px;
 							border-left:none;
 							border-right:none;
 							font-size:14px;

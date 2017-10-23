@@ -1,3 +1,10 @@
+// Carousel Variables
+$total_products: 6;
+$products_to_show: 4;
+$product_card_width: 100% / $total_products;
+$inner_slider_width: (100% / $products_to_show) * $total_products;
+$transitions_timing: 0.6s;
+
 .carousel_container{
 	position: absolute;
 	width: 84%;
@@ -31,13 +38,16 @@
 
 		.inner_slider{
 			position: relative;
-			width: 150%;
+			width: $inner_slider_width;
 			height: 100%;
+			left: 0;
 			display: block;
+
+			@include transitions(all, $transitions_timing, ease-in-out);
 
 			.product_card{
 				@include displayLeft();
-				width: 16.66%;
+				width: $product_card_width;
 				height: 100%;
 				text-align: center;
 				// background-color: #fff;
@@ -75,10 +85,9 @@
 			}
 		}
 	}
-
 }
 
-// Navigation
+// Carousel Navigation
 .arrow_container{
 	position: absolute;
 	width: 20px;

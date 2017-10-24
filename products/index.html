@@ -49,7 +49,7 @@
         <div class="innerWrap">
 
             <header>
-                <div id="main_logo">
+                <div id="main_logo" class="fadeLeftIn">
                     <a href="../">
                         <img src="../img/graciela_holguin.png" alt="Graciela Holguín Joyería" title="Graciela Holguín Joyería">
                     </a>
@@ -58,7 +58,7 @@
                 <!-- Dropdown Navigator -->
                 <nav id="main_nav">
                     <ul id="dropdown_menu" class="main_ul">
-                        <li class="main_nav_link">
+                        <li class="main_nav_link fadeLeftIn">
                             <a href="#" title="Lookbook">
                                 <h3>Lookbook</h3>
                                 <span class="dropdown_arrow"></span>
@@ -81,7 +81,7 @@
                         </li>
 
 
-                        <li class="main_nav_link">
+                        <li class="main_nav_link fadeLeftIn">
                             <a href="#"title="Shop">
                                 <h3>Shop</h3>
                                 <span class="dropdown_arrow"></span>
@@ -109,13 +109,13 @@
                             </ul>
                         </li>
 
-                        <li class="main_nav_link">
+                        <li class="main_nav_link fadeLeftIn">
                             <a href="#" title="About">
                                 <h3>About</h3>
                             </a>
                         </li>
 
-                        <li class="main_nav_link">
+                        <li class="main_nav_link fadeLeftIn">
                             <a href="#" title="Contact">
                                 <h3>Contact</h3>
                             </a>
@@ -128,7 +128,7 @@
 
             <!-- Body & Sections Content -->
 
-            <section id="product_carousel">
+            <section id="product_carousel" class="fadeUpIn">
                 <nav class="arrow_container left_arrow_nav">
                     <a href="#" class="carousel_arrows left_carousel_arrow gray_arrow" data-slide="prev"></a>
                 </nav>
@@ -220,8 +220,8 @@
 
 
             <footer>
-                <li class="firstBttn"><a href="https://www.facebook.com/grajoyeria/" target="_blank" title="Facebook"><img src="../img/rrss-fb.png" alt="Facebook"></a></li>
-                <li class="secondBttn"><a href="https://www.instagram.com/grajoyeria/" target="_blank" title="Instagram"><img src="../img/rrss-ig.png" alt="Instagram"></a></li>
+                <li class="firstBttn fadeLeftIn"><a href="https://www.facebook.com/grajoyeria/" target="_blank" title="Facebook"><img src="../img/rrss-fb.png" alt="Facebook"></a></li>
+                <li class="secondBttn fadeLeftIn"><a href="https://www.instagram.com/grajoyeria/" target="_blank" title="Instagram"><img src="../img/rrss-ig.png" alt="Instagram"></a></li>
             </footer>
         </div>
         
@@ -231,6 +231,22 @@
         <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="../js/plugins.js"></script>
         <script src="../js/main.js"></script>
+        <script>
+            $(window).on("load",function(){
+                var firstObjects = $('.fadeLeftIn');
+
+                $.each($('.fadeLeftIn'), function(index, el) {
+                    setTimeout(function(){
+                       $(el).removeClass('fadeLeftIn');
+
+                       if (index == (firstObjects.length - 1)) {
+                            $('.fadeUpIn').removeClass('fadeUpIn');
+                       };
+
+                    }, ( index * 250 ));
+                });
+            });
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

@@ -12,6 +12,8 @@ header{
 		top: 42px;
 		left: 4.5%;
 
+		@include transitions(all, 0.8s, ease-in-out);
+
 		img{
 			vertical-align: top;
 		}
@@ -47,6 +49,8 @@ header{
 				padding: 0 8px;
 				margin: 0 12px;
 				list-style-type:none;
+
+				@include transitions(all, 0.8s, ease-in-out);
 
 				a { 
 					display:block;

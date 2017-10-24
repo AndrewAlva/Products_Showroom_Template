@@ -10,6 +10,8 @@
 		background: url('../img/img-1.jpg');
 		background-size: cover;
 		background-position: bottom left;
+
+		@include transitions(all, 0.8s, ease-in-out);
 	}
 
 	.filter_white{
@@ -20,4 +22,14 @@
 		background-color: #fff;
 		@include opacity(0.1);
 	}
+}
+
+.fadeUpIn{
+    @include translate(0px, 20px);
+    @include opacity(0);
+}
+
+.fadeLeftIn{
+    @include translate(10px, 0px);
+    @include opacity(0);
 }

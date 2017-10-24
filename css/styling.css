@@ -48,7 +48,12 @@ header {
   header #main_logo {
     position: absolute;
     top: 42px;
-    left: 4.5%; }
+    left: 4.5%;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out; }
     header #main_logo img {
       vertical-align: top; }
   header #main_nav {
@@ -83,7 +88,12 @@ header {
         min-width: 104px;
         padding: 0 8px;
         margin: 0 12px;
-        list-style-type: none; }
+        list-style-type: none;
+        -webkit-transition: all 0.8s ease-in-out;
+        -moz-transition: all 0.8s ease-in-out;
+        -ms-transition: all 0.8s ease-in-out;
+        -o-transition: all 0.8s ease-in-out;
+        transition: all 0.8s ease-in-out; }
         header #main_nav .main_ul .main_nav_link a {
           display: block;
           width: 100%;
@@ -145,7 +155,12 @@ header {
                 margin-bottom: 14px; }
 
 #product_carousel {
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out; }
 
 .carousel_container {
   position: absolute;
@@ -359,7 +374,12 @@ footer {
     /* Fix for IE7 */
     width: 20px;
     height: 100%;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out; }
   footer a {
     display: block;
     width: 100%;
@@ -381,7 +401,12 @@ footer {
     height: 100%;
     background: url("../img/img-1.jpg");
     background-size: cover;
-    background-position: bottom left; }
+    background-position: bottom left;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out; }
   .home_left_images .filter_white {
     position: absolute;
     left: 0;
@@ -393,5 +418,27 @@ footer {
     filter: alpha(opacity=10);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
     -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(($val * 100))'; }
+
+.fadeUpIn {
+  -webkit-transform: translate(0px, 20px);
+  -moz-transform: translate(0px, 20px);
+  -ms-transform: translate(0px, 20px);
+  -o-transform: translate(0px, 20px);
+  transform: translate(0px, 20px);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(($val * 100))'; }
+
+.fadeLeftIn {
+  -webkit-transform: translate(10px, 0px);
+  -moz-transform: translate(10px, 0px);
+  -ms-transform: translate(10px, 0px);
+  -o-transform: translate(10px, 0px);
+  transform: translate(10px, 0px);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(($val * 100))'; }
 
 /*# sourceMappingURL=styling.css.map */

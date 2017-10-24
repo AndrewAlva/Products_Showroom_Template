@@ -11,6 +11,8 @@ footer{
 		width: 20px;
 		height: 100%;
 		text-transform: uppercase;
+
+		@include transitions(all, 0.8s, ease-in-out);
 	}
 
 	a{

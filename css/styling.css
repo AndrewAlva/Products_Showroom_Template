@@ -90,8 +90,7 @@ header {
           color: #000;
           text-decoration: none; }
           header #main_nav .main_ul .main_nav_link a:focus {
-            outline: none;
-            text-decoration: underline; }
+            outline: none; }
           header #main_nav .main_ul .main_nav_link a h3 {
             font-size: 18px;
             margin-top: 32px;
@@ -115,8 +114,7 @@ header {
           left: 4px;
           padding: 0;
           border-bottom: 1px solid #919191;
-          list-style-type: none;
-          background-color: #eee; }
+          list-style-type: none; }
           header #main_nav .main_ul .main_nav_link .sub_ul .sub_nav_link {
             width: 100%;
             float: none;
@@ -146,6 +144,9 @@ header {
                 margin-top: 12px;
                 margin-bottom: 14px; }
 
+#product_carousel {
+  background-color: #fff; }
+
 .carousel_container {
   position: absolute;
   width: 84%;
@@ -156,7 +157,6 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  border: 1px solid gray;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -172,7 +172,6 @@ header {
     width: 100%;
     height: 90%;
     overflow: hidden;
-    border: 1px solid green;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
@@ -198,8 +197,7 @@ header {
         /* Fix for IE7 */
         width: 16.6666666667%;
         height: 100%;
-        text-align: center;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+        text-align: center; }
         .carousel_container .carousel_simple .inner_slider .product_card .img_container {
           position: relative;
           width: 100%;
@@ -207,8 +205,7 @@ header {
           padding: 0 10%;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          border: 1px solid aqua; }
+          box-sizing: border-box; }
           .carousel_container .carousel_simple .inner_slider .product_card .img_container img {
             position: absolute;
             margin: auto;
@@ -233,7 +230,6 @@ header {
   margin: auto;
   top: 50px;
   bottom: 0;
-  border: 1px solid red;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -282,7 +278,59 @@ header {
 .return_to_collection {
   position: absolute;
   width: 132px;
-  height: 38px; }
+  height: 38px;
+  left: 45px;
+  bottom: 31px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+  .return_to_collection:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(($val * 100))'; }
+  .return_to_collection div {
+    position: relative;
+    float: left;
+    height: 100%; }
+  .return_to_collection .return_arrow {
+    width: 10px;
+    margin-right: 17px; }
+    .return_to_collection .return_arrow .draw_arrow {
+      position: relative;
+      width: 0;
+      height: 0;
+      top: 39%;
+      border-right: 8px solid #000;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent; }
+  .return_to_collection .return_data {
+    width: 105px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 3px;
+    border-bottom: 1px solid #919191; }
+    .return_to_collection .return_data div {
+      width: 100%; }
+      .return_to_collection .return_data div h4, .return_to_collection .return_data div h5 {
+        margin: 0; }
+    .return_to_collection .return_data .collection_type {
+      height: 39%; }
+      .return_to_collection .return_data .collection_type h4 {
+        color: #000;
+        font-size: 9px;
+        -webkit-font-smoothing: auto; }
+    .return_to_collection .return_data .collection_name {
+      height: 61%; }
+      .return_to_collection .return_data .collection_name h5 {
+        color: #686868;
+        font-size: 13px;
+        letter-spacing: 1px; }
 
 footer {
   z-index: 1000000000;

@@ -55,8 +55,7 @@ header{
 					text-decoration:none;
 
 					&:focus{
-						outline:none; 
-						text-decoration:underline; 
+						outline:none;
 					}
 
 					h3{
@@ -90,7 +89,7 @@ header{
 					padding: 0;
 					border-bottom: 1px solid #919191;
 					list-style-type:none;
-					background-color: #eee;
+					// background-color: #eee;
 
 					// Sub Nav Links
 					.sub_nav_link{

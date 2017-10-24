@@ -30,7 +30,7 @@ var Slider = {
     canScroll: true,
     slideActive: 0,
     duration: 600,
-    showingSlides: 4,
+    showingSlides: 3,
     totalSlides: 6,
     hiddenSlides: 0,
     innerDisplace: 0,

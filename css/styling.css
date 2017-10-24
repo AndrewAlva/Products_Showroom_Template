@@ -166,7 +166,11 @@ header {
     text-transform: uppercase;
     font-size: 50px;
     line-height: 50px;
-    letter-spacing: 5px; }
+    letter-spacing: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 2%; }
   .carousel_container .carousel_simple {
     position: relative;
     width: 100%;
@@ -177,7 +181,7 @@ header {
     box-sizing: border-box; }
     .carousel_container .carousel_simple .inner_slider {
       position: relative;
-      width: 150%;
+      width: 200%;
       height: 100%;
       left: 0;
       display: block;
@@ -197,17 +201,22 @@ header {
         /* Fix for IE7 */
         width: 16.6666666667%;
         height: 100%;
-        text-align: center; }
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 1%; }
         .carousel_container .carousel_simple .inner_slider .product_card .img_container {
           position: relative;
           width: 100%;
           height: 75%;
-          padding: 0 10%;
+          overflow: hidden;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box; }
           .carousel_container .carousel_simple .inner_slider .product_card .img_container img {
             position: absolute;
+            width: 100%;
             margin: auto;
             top: 0;
             bottom: 0;
@@ -228,7 +237,7 @@ header {
   width: 20px;
   height: 50px;
   margin: auto;
-  top: 50px;
+  top: -5%;
   bottom: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
